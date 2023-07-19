@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*{
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+:root{
+--Gblue: #8486a9;
+--Sred: #fb6087;
+
+
+
+--White: #ffffff;
+--Dblue: #343650;
+--VBlue: #1e1f29;
+--Vdarkblue: #191a24;
+}
+ion-icon {
+  color: #343650;
+}
+
+
+body{
+    background:linear-gradient(180deg ,#201e2b 40%, #251d2c 62% );    
+    overflow:hidden ;
+}
+
+section{
+    width: 60%;
+    height: 90vh;
+    margin: auto;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+}
+
+figure img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+figure img:last-child{
+    bottom: 0;
+    left: 0;
+
+}
+
+
+.title{
+    font-size: 20px;
+    color: var(--White);
+}
+
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto 150px;
+    z-index: 999;
+}
+
+
+.flex-item{    
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+     display: inline-block;
+  perspective: 800px;
+}
+.flex-item::after{
+content: '';
+position: absolute;
+top: 26%;
+left: 8%;
+width: 90%;
+height: 30%;
+
+background-color: #343650;
+
+perspective: 4000px;
+transform-origin: center;
+animation: rotar 2s linear infinite ;
+ display: inline-block;
+  width: 40px;
+  height: 60px;
+  font-size: 48px;
+  line-height: 60px;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+@keyframes rotar {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+.flex-item div:first-child{
+    font-size: 70px;
+    background-color: #343650;
+    color: var(--Sred);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 1px 10px #1a1a22;
+    position: relative;
+    overflow: hidden;
+    
+}
+.flex-item hr{
+    position: absolute;
+    top: 27.5%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    /* backdrop-filter:  blur(3px); */
+    border:1px  #3436506b;
+    border-style: inset;
+    z-index: 1;
+}
+.flex-item div:first-child::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: -5%;
+    z-index: 10;
+    background-color: #191a24;
+}
+.flex-item div:first-child::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    right: -5%;
+    z-index: 10;
+    background-color: #191a24;
+}
+
+.flex-item :nth-child(2){
+    margin-top: 20px;
+    color: var(--Gblue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 14px;
+}
