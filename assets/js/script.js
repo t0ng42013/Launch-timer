@@ -94,3 +94,8 @@ title.addEventListener("mouseleave", (callback) => {
 function padLeft(number, length) {
   return String(number).padStart(length, "0");
 }
+
+  document.addEventListener("DOMContentLoaded", () => {
+cuentaRegresiva();
+
+  });
