@@ -6,7 +6,7 @@ let horaUno = document.querySelector(".hr");
 let horaDos = document.querySelector(".hr2");
 let diaUno = document.querySelector(".dia");
 let diaDos = document.querySelector(".dia2");
-let title = document.querySelector("img");
+let title = document.querySelector(".flex-container");
 let contadorS = 60;
 let intervaloID; // Variable para almacenar el intervalo activo
 
